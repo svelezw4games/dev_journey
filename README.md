@@ -9,9 +9,3 @@ Welcome to your developer journey! In this repository, we provide open-source co
 
 
 - Feel free to add more features from the event, like polls, your experience from the talks, or simply a greeting from your character or the project you're working on. Introduce yourself – we'd love to get to know you! And if you find a bug, don’t hesitate to let us know.
-
-
-
-
-
-

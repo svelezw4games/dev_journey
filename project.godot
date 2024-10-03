@@ -18,3 +18,7 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/mode=2
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://resources/localization/words.en.translation", "res://resources/localization/words.es.translation")

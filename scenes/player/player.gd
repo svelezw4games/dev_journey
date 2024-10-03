@@ -8,7 +8,7 @@ const GODOT_CON_LOCATION:Vector2=Vector2(1678, 520)
 
 func _ready() -> void:
 	$Label.visible=false
-
+	$codingLabel.visible=false
 
 func set_godot_con_location(direction:Vector2):
 	pass
@@ -30,3 +30,9 @@ func is_near_godot_con():
 func have_any_questions():
 	$Label.visible=true
 	$AnimationPlayer.play("have_questions")
+
+func invite_everyone(repo_name):
+	$codingLabel.visible=true
+	$codingLabel.text="git clone "+ repo_name
+	$AnimationPlayer.play("Invite")
+	

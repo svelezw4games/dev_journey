@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://475b64bdvr8q"
+
+[deps]
+
+files=["res://resources/localization/words.en.translation", "res://resources/localization/words.es.translation"]
+
+source_file="res://resources/localization/words.csv"
+dest_files=["res://resources/localization/words.en.translation", "res://resources/localization/words.es.translation"]
+
+[params]
+
+compress=true
+delimiter=0
