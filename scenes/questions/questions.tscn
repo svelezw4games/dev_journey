@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0mf7jm5ldlgp"]
 
 [ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://berlin.png" id="1_m138e"]
-[ext_resource type="Script" path="res://questions/questions.gd" id="1_ph1ug"]
-[ext_resource type="PackedScene" uid="uid://bdrgcw41n6y3v" path="res://Godot_con/Player.tscn" id="2_q54ee"]
+[ext_resource type="Script" path="res://scenes/questions/questions.gd" id="1_ph1ug"]
+[ext_resource type="PackedScene" uid="uid://bdrgcw41n6y3v" path="res://scenes/player/Player.tscn" id="2_q54ee"]
 
 [node name="Questions" type="Node2D"]
 script = ExtResource("1_ph1ug")

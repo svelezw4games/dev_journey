@@ -3,7 +3,7 @@ class_name Berlin
 
 const GODOT_CON_LOCATION:Vector2=Vector2(52.54620023566117, 13.366516357670347)
 
-var PlayerScene = preload("res://Godot_con/Player.tscn")
+var PlayerScene = preload("res://scenes/player/Player.tscn")
 var player:Player
 var start_moving:bool=false
 
