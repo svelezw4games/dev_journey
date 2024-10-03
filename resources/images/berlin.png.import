@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cei1r2ym6r1o7"
-path="res://.godot/imported/berlin.png-b3ecbd4ecfffb03e09a83eae7de97159.ctex"
+path="res://.godot/imported/berlin.png-72a74ec5f5fc42d906296175769642c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://berlin.png"
-dest_files=["res://.godot/imported/berlin.png-b3ecbd4ecfffb03e09a83eae7de97159.ctex"]
+source_file="res://resources/images/berlin.png"
+dest_files=["res://.godot/imported/berlin.png-72a74ec5f5fc42d906296175769642c3.ctex"]
 
 [params]
 

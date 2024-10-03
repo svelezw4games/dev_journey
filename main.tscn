@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ca8xurn8he6va"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_e5gve"]
-[ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://berlin.png" id="2_u4toj"]
+[ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://resources/images/berlin.png" id="2_u4toj"]
 
 [sub_resource type="Curve2D" id="Curve2D_q3rgq"]
 _data = {

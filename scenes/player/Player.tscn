@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_rtb27"]
 [ext_resource type="Texture2D" uid="uid://bafc84jof1ysv" path="res://icon.svg" id="2_uyuuf"]
-[ext_resource type="FontFile" uid="uid://bdl6msjqbdwaf" path="res://Exo2-Bold.otf" id="3_pury8"]
+[ext_resource type="FontFile" uid="uid://bdl6msjqbdwaf" path="res://resources/fonts/Exo2-Bold.otf" id="3_pury8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6luji"]
 size = Vector2(130, 130)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://chn2evtb6km7l"]
 
-[ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://berlin.png" id="1_g34io"]
+[ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://resources/images/berlin.png" id="1_g34io"]
 [ext_resource type="Script" path="res://scenes/first_day/first_day.gd" id="1_y3l5t"]
 [ext_resource type="PackedScene" uid="uid://bdrgcw41n6y3v" path="res://scenes/player/Player.tscn" id="3_y1d0n"]
-[ext_resource type="FontFile" uid="uid://bdl6msjqbdwaf" path="res://Exo2-Bold.otf" id="4_ncxys"]
+[ext_resource type="FontFile" uid="uid://bdl6msjqbdwaf" path="res://resources/fonts/Exo2-Bold.otf" id="4_ncxys"]
 
 [sub_resource type="Animation" id="Animation_e50ev"]
 length = 0.001
