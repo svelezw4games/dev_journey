@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdrgcw41n6y3v"]
+
+[ext_resource type="Script" path="res://Godot_con/employeename.gd" id="1_2roj0"]
+[ext_resource type="Texture2D" uid="uid://bafc84jof1ysv" path="res://icon.svg" id="2_pu0q1"]
+[ext_resource type="FontFile" uid="uid://bdl6msjqbdwaf" path="res://Exo2-Bold.otf" id="3_t66ra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6luji"]
+size = Vector2(130, 130)
+
+[sub_resource type="Animation" id="Animation_yv1cn"]
+resource_name = "have_questions"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 5.65686),
+"update": 0,
+"values": [Color(0.219608, 0.447059, 0.937255, 0), Color(0.219608, 0.447059, 0.937255, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l20dl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.219608, 0.447059, 0.937255, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cdig3"]
+_data = {
+"RESET": SubResource("Animation_l20dl"),
+"have_questions": SubResource("Animation_yv1cn")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_ib3pu"]
+font = ExtResource("3_t66ra")
+font_size = 100
+font_color = Color(0.219608, 0.447059, 0.937255, 1)
+outline_size = 60
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_2roj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6luji")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pu0q1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cdig3")
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -248.0
+offset_top = -185.0
+offset_right = 274.0
+offset_bottom = -65.0
+text = "?? && /* */"
+label_settings = SubResource("LabelSettings_ib3pu")
+horizontal_alignment = 1
+vertical_alignment = 1

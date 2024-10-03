@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://chn2evtb6km7l"]
+
+[ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://berlin.png" id="1_g34io"]
+[ext_resource type="Script" path="res://first_day/first_day.gd" id="1_y3l5t"]
+[ext_resource type="PackedScene" uid="uid://bdrgcw41n6y3v" path="res://Godot_con/Player.tscn" id="3_y1d0n"]
+[ext_resource type="FontFile" uid="uid://bdl6msjqbdwaf" path="res://Exo2-Bold.otf" id="4_ncxys"]
+
+[sub_resource type="Animation" id="Animation_yg2y8"]
+resource_name = "first_day"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.165656, 0.165656, 0.165656, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e50ev"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rg22v"]
+_data = {
+"RESET": SubResource("Animation_e50ev"),
+"first_day": SubResource("Animation_yg2y8")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_0kdoy"]
+font = ExtResource("4_ncxys")
+font_size = 100
+font_color = Color(0.219608, 0.447059, 0.937255, 1)
+
+[node name="FirstDay" type="Node2D"]
+script = ExtResource("1_y3l5t")
+
+[node name="DayCycle" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rg22v")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1568, 1118)
+texture = ExtResource("1_g34io")
+
+[node name="Player" parent="." instance=ExtResource("3_y1d0n")]
+position = Vector2(1670, 532)
+
+[node name="label" type="Label" parent="."]
+offset_left = 828.0
+offset_top = 221.0
+offset_right = 2615.0
+offset_bottom = 394.0
+text = "✨ That's a wrap for Godot.Con! 🎮💻"
+label_settings = SubResource("LabelSettings_0kdoy")
+
+[connection signal="animation_finished" from="DayCycle" to="." method="_DayCycle_ended"]
