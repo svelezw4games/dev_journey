@@ -18,10 +18,10 @@ func _ready() -> void:
 	$Player.position=event_address.position
 
 func _DayCycle_ended(anim_name: StringName) -> void:
-	if anim_name=="first_day":
+	if anim_name=="fourth_day":
 		$label.visible=true
 
 func _input(event: InputEvent) -> void:
 
 	if event.is_action_pressed("ui_accept"):
-		$DayCycle.play("first_day")
+		$DayCycle.play("fourth_day")

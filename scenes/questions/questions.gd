@@ -2,6 +2,8 @@ extends Node2D
 
 class_name QuestionsAndComments
 
-func _ready() -> void:
+
+func _input(event: InputEvent) -> void:
 	# TODO: Leave us your questions?? and comments /**/
-	$Player.have_any_questions()
+	if event.is_action_pressed("ui_accept"):
+		$Player.have_any_questions()

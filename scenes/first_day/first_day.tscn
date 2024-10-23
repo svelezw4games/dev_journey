@@ -21,7 +21,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_yg2y8"]
-resource_name = "first_day"
+resource_name = "fourth_day"
 length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -39,7 +39,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rg22v"]
 _data = {
 "RESET": SubResource("Animation_e50ev"),
-"first_day": SubResource("Animation_yg2y8")
+"fourth_day": SubResource("Animation_yg2y8")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_0kdoy"]
@@ -50,7 +50,7 @@ font_color = Color(0.219608, 0.447059, 0.937255, 1)
 [node name="FirstDay" type="Node2D"]
 script = ExtResource("1_y3l5t")
 location = "res://resources/images/buenos_aires.png"
-language = "en"
+language = "es"
 day = "DAY_4"
 
 [node name="DayCycle" type="AnimationPlayer" parent="."]

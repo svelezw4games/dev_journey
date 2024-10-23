@@ -4,25 +4,25 @@ class_name Player
 
 @export var speed = 400
 
-var TAREGT_LOCATION:Vector2=Vector2.ZERO
+var EVENT_LOCATION:Vector2=Vector2.ZERO
 
 func _ready() -> void:
 	$Label.visible=false
 	$codingLabel.visible=false
 
-func set_godot_con_location(target:Vector2):
-	TAREGT_LOCATION=target
+func set_event_location(target:Vector2):
+	EVENT_LOCATION=target
 
-func move_to_godot_con():
-	velocity = position.direction_to(TAREGT_LOCATION) * speed
+func move_to_event():
+	velocity = position.direction_to(EVENT_LOCATION) * speed
 	move_and_slide()
 
-func is_at_godot_con():
-	var distance = position.distance_to(TAREGT_LOCATION)
+func is_at_event():
+	var distance = position.distance_to(EVENT_LOCATION)
 	return distance < 1.0
 
-func is_near_godot_con():
-	var distance = position.distance_to(TAREGT_LOCATION)
+func is_near_event():
+	var distance = position.distance_to(EVENT_LOCATION)
 	
 	if distance < 20:
 		speed *=0.10
