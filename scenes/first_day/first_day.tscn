@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://chn2evtb6km7l"]
 
-[ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://resources/images/berlin.png" id="1_g34io"]
 [ext_resource type="Script" path="res://scenes/first_day/first_day.gd" id="1_y3l5t"]
+[ext_resource type="Texture2D" uid="uid://dvaxfhna0poax" path="res://resources/images/buenos_aires.png" id="2_pw7g7"]
 [ext_resource type="PackedScene" uid="uid://bdrgcw41n6y3v" path="res://scenes/player/Player.tscn" id="3_y1d0n"]
 [ext_resource type="FontFile" uid="uid://bdl6msjqbdwaf" path="res://resources/fonts/Exo2-Bold.otf" id="4_ncxys"]
 
@@ -10,7 +10,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/path = NodePath("map:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -26,7 +26,7 @@ length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/path = NodePath("map:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -49,25 +49,31 @@ font_color = Color(0.219608, 0.447059, 0.937255, 1)
 
 [node name="FirstDay" type="Node2D"]
 script = ExtResource("1_y3l5t")
+location = "res://resources/images/buenos_aires.png"
+language = "en"
+day = "DAY_4"
 
 [node name="DayCycle" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_rg22v")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1568, 1118)
-texture = ExtResource("1_g34io")
+[node name="map" type="Sprite2D" parent="."]
+position = Vector2(1539, 1070)
+texture = ExtResource("2_pw7g7")
 
 [node name="Player" parent="." instance=ExtResource("3_y1d0n")]
-position = Vector2(1670, 532)
+position = Vector2(1648, 881)
 
 [node name="label" type="Label" parent="."]
-offset_left = 828.0
-offset_top = 221.0
-offset_right = 2615.0
-offset_bottom = 394.0
-text = "✨ That's a wrap for Godot.Con! 🎮💻"
+offset_left = 816.0
+offset_top = 573.0
+offset_right = 2603.0
+offset_bottom = 746.0
+text = "DAY_1"
 label_settings = SubResource("LabelSettings_0kdoy")
+
+[node name="event_location" type="Node2D" parent="."]
+position = Vector2(1638, 835)
 
 [connection signal="animation_finished" from="DayCycle" to="." method="_DayCycle_ended"]

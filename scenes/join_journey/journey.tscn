@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://unw6coublnr1"]
 
 [ext_resource type="Script" path="res://scenes/join_journey/journey.gd" id="1_4hpuq"]
-[ext_resource type="Texture2D" uid="uid://cei1r2ym6r1o7" path="res://resources/images/berlin.png" id="2_pvvdx"]
+[ext_resource type="Texture2D" uid="uid://dvaxfhna0poax" path="res://resources/images/buenos_aires.png" id="2_52xlo"]
 [ext_resource type="PackedScene" uid="uid://bdrgcw41n6y3v" path="res://scenes/player/Player.tscn" id="3_i0ioc"]
 
 [node name="Journey" type="Node2D"]
 script = ExtResource("1_4hpuq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1576, 1120)
-texture = ExtResource("2_pvvdx")
+position = Vector2(1539, 1074)
+texture = ExtResource("2_52xlo")
 
 [node name="Player" parent="." instance=ExtResource("3_i0ioc")]
-position = Vector2(1672, 541)
+position = Vector2(1599, 854)

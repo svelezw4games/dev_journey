@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 window/size/mode=2
 
+[editor]
+
+movie_writer/movie_file="event"
+
 [internationalization]
 
 locale/translations=PackedStringArray("res://resources/localization/words.en.translation", "res://resources/localization/words.es.translation")
+locale/include_text_server_data=true
+locale/fallback="es"
